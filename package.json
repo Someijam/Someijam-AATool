@@ -1,0 +1,15 @@
+{
+  "name": "someijam-aatool",
+  "version": "1.0.0",
+  "description": "Someijam's Minecraft All Advancements Tool",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Someijam",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "electron": "^25.3.2"
+  }
+}
