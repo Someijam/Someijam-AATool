@@ -190,18 +190,40 @@ for(var key of advancementsNameList) {
 
 console.log(advancementsStatusList)
 
+// console.log(statsData.stats)
 //Count stats counts
 var statsCountList = new Map()
+
+numOfAncientDebris = statsData.stats["minecraft:mined"]["minecraft:ancient_debris"]
+if(typeof numOfAncientDebris === 'undefined') numOfAncientDebris = 0
+numOfGoldBlockMined = statsData.stats["minecraft:mined"]["minecraft:gold_block"]
+if(typeof numOfGoldBlockMined === 'undefined') numOfGoldBlockMined = 0
+numOfGoldBlockCrafted = statsData.stats["minecraft:crafted"]["minecraft:gold_block"]
+if(typeof numOfGoldBlockCrafted === 'undefined') numOfGoldBlockCrafted = 0
+numOfIronBlockCrafted = statsData.stats["minecraft:crafted"]["minecraft:iron_block"]
+if(typeof numOfIronBlockCrafted === 'undefined') numOfIronBlockCrafted = 0
+numOfDiamondBlockCrafted = statsData.stats["minecraft:crafted"]["minecraft:diamond_block"]
+if(typeof numOfDiamondBlockCrafted === 'undefined') numOfDiamondBlockCrafted = 0
+numOfTrident= statsData.stats["minecraft:picked_up"]["minecraft:trident"]
+if(typeof numOfTrident === 'undefined') numOfTrident = 0
+numOfShells = statsData.stats["minecraft:picked_up"]["minecraft:nautilus_shell"]
+if(typeof numOfShells === 'undefined') numOfShells = 0
+numOfSkulls = statsData.stats["minecraft:picked_up"]["minecraft:wither_skeleton_skull"]
+if(typeof numOfSkulls === 'undefined') numOfSkulls = 0
+
+statsCountList.set("ancient_debris", statsData.stats["minecraft:mined"]["minecraft:ancient_debris"])
+statsCountList.set("metal_block", numOfGoldBlockMined + numOfGoldBlockCrafted + numOfIronBlockCrafted + numOfDiamondBlockCrafted)
+statsCountList.set("enchanted_golden_apple", advancementsData["minecraft:recipes/misc/mojang_banner_pattern"].done)
+statsCountList.set("trident", numOfTrident)
+statsCountList.set("nautilus_shell", numOfShells)
+statsCountList.set("wither_skeleton_skull", numOfSkulls)
+
+console.log(statsCountList)
+
 //TODO: add stats count
 // Nesseccary stats
 // numeral count items
-// 20 (ancient debris + netherite scrap + 4*nethrite ingots)
-// 3 (wither skulls)
-// 164 (blocks of gold/iron/diamond/emerald)
-// 8 (shells)
-// 1 (trident)
 // 1 (music disc)
-// 1 (enchanted golden apple)
 // ---
 // collective items
 // 5 nether biomes
