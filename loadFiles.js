@@ -1,3 +1,5 @@
+// In: savesPath
+// Out: advancementsInfo
 const fs = require('fs');
 var path = require('path');
 
@@ -118,6 +120,195 @@ const advancementsNameList = [
     "minecraft:husbandry/plant_any_sniffer_seed",
     "minecraft:husbandry/kill_axolotl_target"
 ]
+const overworldBiomesList = [
+    "minecraft:snowy_slopes",
+    "minecraft:old_growth_pine_taiga",
+    "minecraft:mushroom_fields",
+    "minecraft:taiga",
+    "minecraft:deep_ocean",
+    "minecraft:eroded_badlands",
+    "minecraft:frozen_river",
+    "minecraft:cherry_grove",
+    "minecraft:sunflower_plains",
+    "minecraft:birch_forest",
+    "minecraft:windswept_hills",
+    "minecraft:bamboo_jungle",
+    "minecraft:wooded_badlands",
+    "minecraft:badlands",
+    "minecraft:savanna_plateau",
+    "minecraft:beach",
+    "minecraft:dark_forest",
+    "minecraft:stony_peaks",
+    "minecraft:mangrove_swamp",
+    "minecraft:sparse_jungle",
+    "minecraft:lukewarm_ocean",
+    "minecraft:river",
+    "minecraft:snowy_plains",
+    "minecraft:stony_shore",
+    "minecraft:dripstone_caves",
+    "minecraft:snowy_taiga",
+    "minecraft:grove",
+    "minecraft:swamp",
+    "minecraft:jagged_peaks",
+    "minecraft:cold_ocean",
+    "minecraft:forest",
+    "minecraft:lush_caves",
+    "minecraft:deep_cold_ocean",
+    "minecraft:ice_spikes",
+    "minecraft:frozen_ocean",
+    "minecraft:desert",
+    "minecraft:deep_frozen_ocean",
+    "minecraft:windswept_forest",
+    "minecraft:jungle",
+    "minecraft:ocean",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:snowy_beach",
+    "minecraft:windswept_savanna",
+    "minecraft:warm_ocean",
+    "minecraft:deep_lukewarm_ocean",
+    "minecraft:flower_forest",
+    "minecraft:frozen_peaks",
+    "minecraft:old_growth_birch_forest",
+    "minecraft:deep_dark",
+    "minecraft:meadow",
+    "minecraft:windswept_gravelly_hills",
+    "minecraft:savanna",
+    "minecraft:plains"
+]
+const netherBiomesList = [
+    "minecraft:basalt_deltas",
+    "minecraft:crimson_forest",
+    "minecraft:soul_sand_valley",
+    "minecraft:warped_forest",
+    "minecraft:nether_wastes"
+]
+const mobsList = [
+    "minecraft:blaze",
+    "minecraft:pillager",
+    "minecraft:skeleton",
+    "minecraft:elder_guardian",
+    "minecraft:zoglin",
+    "minecraft:ravager",
+    "minecraft:ghast",
+    "minecraft:hoglin",
+    "minecraft:guardian",
+    "minecraft:vindicator",
+    "minecraft:magma_cube",
+    "minecraft:piglin_brute",
+    "minecraft:spider",
+    "minecraft:creeper",
+    "minecraft:wither",
+    "minecraft:evoker",
+    "minecraft:slime",
+    "minecraft:phantom",
+    "minecraft:zombified_piglin",
+    "minecraft:witch",
+    "minecraft:wither_skeleton",
+    "minecraft:husk",
+    "minecraft:ender_dragon",
+    "minecraft:shulker",
+    "minecraft:cave_spider",
+    "minecraft:piglin",
+    "minecraft:enderman",
+    "minecraft:silverfish",
+    "minecraft:stray",
+    "minecraft:endermite",
+    "minecraft:vex",
+    "minecraft:zombie",
+    "minecraft:drowned",
+    "minecraft:zombie_villager",
+]
+const breedableAnimalsList = [
+    "minecraft:cat",
+    "minecraft:donkey",
+    "minecraft:fox",
+    "minecraft:llama",
+    "minecraft:pig",
+    "minecraft:frog",
+    "minecraft:turtle",
+    "minecraft:sheep",
+    "minecraft:mule",
+    "minecraft:hoglin",
+    "minecraft:sniffer",
+    "minecraft:mooshroom",
+    "minecraft:strider",
+    "minecraft:ocelot",
+    "minecraft:cow",
+    "minecraft:goat",
+    "minecraft:camel",
+    "minecraft:chicken",
+    "minecraft:wolf",
+    "minecraft:panda",
+    "minecraft:horse",
+    "minecraft:rabbit",
+    "minecraft:bee",
+    "minecraft:axolotl"
+]
+const catsList = [
+    "minecraft:white",
+    "minecraft:tabby",
+    "minecraft:calico",
+    "minecraft:siamese",
+    "minecraft:jellie",
+    "minecraft:persian",
+    "minecraft:black",
+    "minecraft:all_black",
+    "minecraft:ragdoll",
+    "minecraft:british_shorthair",
+    "minecraft:red"
+]
+const foodsList = [
+    "cooked_porkchop",
+    "chicken",
+    "honey_bottle",
+    "cooked_mutton",
+    "sweet_berries",
+    "chorus_fruit",
+    "cooked_beef",
+    "baked_potato",
+    "beef",
+    "porkchop",
+    "tropical_fish",
+    "beetroot_soup",
+    "apple",
+    "spider_eye",
+    "potato",
+    "cooked_cod",
+    "rabbit",
+    "poisonous_potato",
+    "pumpkin_pie",
+    "mutton",
+    "pufferfish",
+    "bread",
+    "golden_apple",
+    "cookie",
+    "rotten_flesh",
+    "suspicious_stew",
+    "glow_berries",
+    "dried_kelp",
+    "salmon",
+    "melon_slice",
+    "beetroot",
+    "golden_carrot",
+    "cooked_rabbit",
+    "cooked_chicken",
+    "enchanted_golden_apple",
+    "mushroom_stew",
+    "cod",
+    "rabbit_stew",
+    "cooked_salmon",
+    "carrot"
+]
+const templatesList = [
+    "armor_trimmed_minecraft:silence_armor_trim_smithing_template_smithing_trim",
+    "armor_trimmed_minecraft:wayfinder_armor_trim_smithing_template_smithing_trim",
+    "armor_trimmed_minecraft:tide_armor_trim_smithing_template_smithing_trim",
+    "armor_trimmed_minecraft:spire_armor_trim_smithing_template_smithing_trim",
+    "armor_trimmed_minecraft:vex_armor_trim_smithing_template_smithing_trim",
+    "armor_trimmed_minecraft:ward_armor_trim_smithing_template_smithing_trim",
+    "armor_trimmed_minecraft:rib_armor_trim_smithing_template_smithing_trim",
+    "armor_trimmed_minecraft:snout_armor_trim_smithing_template_smithing_trim"
+]
 
 // Provide "saves" folder path
 var savesPath="/Users/someijamling/Documents/Minecraft/.minecraft/versions/1.20.1/saves"
@@ -210,6 +401,9 @@ numOfShells = statsData.stats["minecraft:picked_up"]["minecraft:nautilus_shell"]
 if(typeof numOfShells === 'undefined') numOfShells = 0
 numOfSkulls = statsData.stats["minecraft:picked_up"]["minecraft:wither_skeleton_skull"]
 if(typeof numOfSkulls === 'undefined') numOfSkulls = 0
+numOfEggs = statsData.stats["minecraft:picked_up"]["minecraft:sniffer_egg"]
+if(typeof numOfEggs === 'undefined') numOfEggs = 0
+
 
 statsCountList.set("ancient_debris", statsData.stats["minecraft:mined"]["minecraft:ancient_debris"])
 statsCountList.set("metal_block", numOfGoldBlockMined + numOfGoldBlockCrafted + numOfIronBlockCrafted + numOfDiamondBlockCrafted)
@@ -217,6 +411,7 @@ statsCountList.set("enchanted_golden_apple", advancementsData["minecraft:recipes
 statsCountList.set("trident", numOfTrident)
 statsCountList.set("nautilus_shell", numOfShells)
 statsCountList.set("wither_skeleton_skull", numOfSkulls)
+statsCountList.set("sniffer_egg",numOfEggs)
 
 console.log(statsCountList)
 
@@ -225,6 +420,90 @@ console.log(statsCountList)
 // numeral count items
 // 1 (music disc)
 // ---
+
+var overworldBiomesStatusList = new Map()
+for(var key of overworldBiomesList) {
+    try {
+        // console.log(key, advancementsData[key].done)
+        overworldBiomesStatusList.set(key, advancementsData["minecraft:adventure/adventuring_time"].criteria[key] != null)
+    } catch (error) {
+        // console.log(error)
+        overworldBiomesStatusList.set(key, false)
+    }
+}
+console.log(overworldBiomesStatusList)
+
+var netherBiomesStatusList = new Map()
+for(var key of netherBiomesList) {
+    try {
+        // console.log(key, advancementsData[key].done)
+        netherBiomesStatusList.set(key, advancementsData["minecraft:nether/explore_nether"].criteria[key] != null)
+    } catch (error) {
+        // console.log(error)
+        netherBiomesStatusList.set(key, false)
+    }
+}
+console.log(netherBiomesStatusList)
+
+var killedMobStatusList = new Map()
+for(var key of mobsList) {
+    try {
+        // console.log(key, advancementsData[key].done)
+        killedMobStatusList.set(key, advancementsData["minecraft:adventure/kill_all_mobs"].criteria[key] != null)
+    } catch (error) {
+        // console.log(error)
+        killedMobStatusList.set(key, false)
+    }
+}
+console.log(killedMobStatusList)
+
+var breedAnimalStatusList = new Map()
+for(var key of breedableAnimalsList) {
+    try {
+        // console.log(key, advancementsData[key].done)
+        breedAnimalStatusList.set(key, advancementsData["minecraft:husbandry/bred_all_animals"].criteria[key] != null)
+    } catch (error) {
+        // console.log(error)
+        breedAnimalStatusList.set(key, false)
+    }
+}
+console.log(breedAnimalStatusList)
+
+var catStatusList = new Map()
+for(var key of catsList) {
+    try {
+        // console.log(key, advancementsData[key].done)
+        catStatusList.set(key, advancementsData["minecraft:husbandry/complete_catalogue"].criteria[key] != null)
+    } catch (error) {
+        // console.log(error)
+        catStatusList.set(key, false)
+    }
+}
+console.log(catStatusList)
+
+var foodStatusList = new Map()
+for(var key of foodsList) {
+    try {
+        // console.log(key, advancementsData[key].done)
+        foodStatusList.set(key, advancementsData["minecraft:husbandry/balanced_diet"].criteria[key] != null)
+    } catch (error) {
+        // console.log(error)
+        foodStatusList.set(key, false)
+    }
+}
+console.log(foodStatusList)
+
+var templatesStatusList = new Map()
+for(var key of templatesList) {
+    try {
+        // console.log(key, advancementsData[key].done)
+        templatesStatusList.set(key, advancementsData["minecraft:adventure/trim_with_all_exclusive_armor_patterns"].criteria[key] != null)
+    } catch (error) {
+        // console.log(error)
+        templatesStatusList.set(key, false)
+    }
+}
+console.log(templatesStatusList)
 // collective items
 // 5 nether biomes
 // 53 overworld biomes
@@ -232,3 +511,17 @@ console.log(statsCountList)
 // 24 breedable animals
 // 11 kinds of cats
 // 40 kinds of foods
+// 8 kinds of templates
+
+
+// var advancementsStatusList = new Map()
+
+// var statsCountList = new Map()
+
+// var overworldBiomesStatusList = new Map()
+// var netherBiomesStatusList = new Map()
+// var killedMobStatusList = new Map()
+// var breedAnimalStatusList = new Map()
+// var catStatusList = new Map()
+// var foodStatusList = new Map()
+// var templatesStatusList = new Map()
