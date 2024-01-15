@@ -131,3 +131,4 @@ dist
 example-advancements.json
 example-stats.json
 .DS_Store
+useless/
